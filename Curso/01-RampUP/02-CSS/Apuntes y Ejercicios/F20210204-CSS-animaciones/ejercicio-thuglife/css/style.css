@@ -1,0 +1,163 @@
+body {
+  background-color: black;
+}
+
+.wrapper {
+  width: 645px;
+  margin: 0 auto;
+}
+
+.photo {
+  width: 100%;
+  margin: 50px 0%;
+}
+
+
+figure {
+  position: relative;
+  width: 100%;
+  margin: 10px 0%;
+}
+
+figure#ardilla:hover > img.ardilla {
+  filter: grayscale(100%);
+}
+
+figure#ardilla > img.gafas.ardilla {
+  position: absolute;
+  transform: rotate(4deg) scale(0.25);
+  visibility: hidden;
+  top: -60px;
+  left: 50px;
+}
+figure#ardilla:hover > img.gafas.ardilla {
+  visibility: visible;
+  top: 200px;
+  transform: rotate(1turn) scale(0.25);
+
+  transition: top 5s, transform 5s;
+}
+
+figure#ardilla > img.logo.ardilla {
+  position: absolute;
+  transform: scale(0.5);
+  visibility: hidden;
+  top: -175px;
+  left: -500px;
+}
+figure#ardilla:hover > img.logo.ardilla {
+  visibility: visible;
+  left: 0px;
+  transition: left 5s;
+}
+
+figure#ardilla > img.trompeta.ardilla {
+  position: absolute;
+  transform: scale(0.25);
+  visibility: hidden;
+  bottom: -75px;
+  left: 165px;
+}
+figure#ardilla:hover > img.trompeta {
+  visibility: visible;
+  bottom: 135px;
+  transition: bottom 5s;
+}
+figure#pescao>img.gafas.pescao {
+  position:absolute;
+}
+
+
+img.gafas.pescao {
+  transform: scale(0.75);
+  left: 35px;
+  top: 138px;
+  visibility: hidden;
+}
+
+figure#pescao:hover {
+  animation: fotoSepia 5s;
+  filter: sepia(100%);
+}
+
+figure#pescao:hover > img.gafas.pescao {
+  visibility: visible;
+  animation: gafasPescao 5s;
+  transform:scale(0.25);
+
+}
+
+img.logo.pescao {
+  transform: scale(0.75);
+  visibility: hidden;
+  left: -550px;
+  top: 100px;
+  position:absolute;
+}
+
+figure#pescao:hover > img.logo.pescao {
+  visibility: visible;
+  animation: logoPescao 5s;
+  left: 0px;
+}
+
+img.trompeta.pescao {
+  transform: scale(0.25);
+  visibility: hidden;
+  left: 150px;
+  top: 185px;
+  position:absolute;
+}
+
+figure#pescao:hover > img.trompeta.pescao {
+  visibility: visible;
+  animation: trompetaPescao 5s;
+}
+
+@keyframes gafasPescao {
+  0% {
+    transform: rotate(0deg) scale(0.25);
+    top: -50px;
+  }
+  100% {
+    top: 138px;
+    transform: rotate(360deg) scale(0.25);
+  }
+}
+
+@keyframes logoPescao {
+  0% {
+    left: -550px;
+    opacity: 0;
+  }
+  75% {
+    left: -550px;
+    opacity: 0;
+  }
+  100% {
+    left: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes trompetaPescao {
+  0% {
+    top: 450px;
+  }
+  100% {
+    top: 185px;
+  }
+}
+@keyframes fotoSepia {
+  0% {
+    filter: none;
+  }
+  95% {
+    filter: none;
+  }
+  100% {
+    filter: sepia(100%);
+  }
+}
+
+

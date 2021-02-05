@@ -1,0 +1,17 @@
+nav li a {
+    text-decoration: none;
+    color: black;
+}
+
+.reverse {
+    background-color: black;
+}
+
+nav ol li.reverse a{
+
+    color:white;
+}
+
+#special {
+    color:green;    
+}

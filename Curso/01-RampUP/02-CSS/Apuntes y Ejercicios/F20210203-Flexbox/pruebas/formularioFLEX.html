@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <section>
+                <h1>Los ladronzuelos de bicicletas</h1>
+                <form class="flexForm" action="POST">
+                    <div class="formWrapper">
+                        <label for="fecha">Día</label>
+                        <input
+                            class="textFormulario"
+                            type="date"
+                            name="fecha"
+                            id="fecha"
+                        >
+                    </div>
+                    <div class="formWrapper">
+                        <label for="hora">Hora</label>
+                        <input
+                            class="textFormulario"
+                            type="time"
+                            name="hora"
+                            id="hora"
+                        >
+                    </div>
+                    <div class="formWrapper">
+                        <label for="colorBicicleta">Color de la Bicicleta</label>
+                        <input
+                            class="textFormulario"
+                            type="color"
+                            name="colorBicicleta"
+                            id="colorBicicleta"
+                        >
+                    </div>
+                    <div class="formWrapper">
+                        <label for="precio">Precio</label>
+                        <input
+                            class="textFormulario"
+                            type="range"
+                            name="precio"
+                            id="precio"
+                            min="0"
+                            max="1000"
+                        >
+                    </div>
+                    <div class="formWrapper">
+                        <label for="tipoBicicleta">Tipo de bicicleta</label>
+                        <select class="textFormulario" name="tipoBicicleta" id="tipoBicicleta">
+                            <option value="" disabled selected>-- Elige tu bicicleta --</option>
+                            <optgroup label="Paseo">
+                                <option value="paseoSenyorial">Señorial</option>
+                                <option value="paseoAntiplebeyos">Anti-plebeyos</option>
+                                <option value="paseoPorEncimaDelHombro">PorEncimaDelHombro</option>
+                            </optgroup>
+                            <optgroup label="Montaña">
+                                <option value="montanyaGamusinos">Gamusinos</option>
+                                <option value="montanyaHueleFlores">Hueleflores premium</option>
+                                <option value="montanyaFangoLover">Fango lover</option>
+                            </optgroup>
+                            <optgroup label="Carreras">
+                                <option value="carrerasMetroymedio">Metroymedio</option>
+                                <option value="carrera3deLaTarde">3 de la tarde. Fluorescente edition</option>
+                                <option value="carreraGrupitors">Grupitors</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div class="formWrapper">
+                        <label for="accesorioRuedines">Precio</label>
+                        <div>
+                            <input type="checkbox" name="accesorioRuedines" id="accesorioRuedines">
+                            <label for="accesorioRuedines">Ruedines</label>
+                            <input type="checkbox" name="accesorioPegatinas" id="accesorioPegatinas">
+                            <label for="accesorioPegatinas">Pegatinas</label>
+                            <input type="checkbox" name="accesorioCestita" id="accesorioCestita">
+                            <label for="accesorioCestita">Cestita</label>
+                            <input type="checkbox" name="accesorioBombaAire" id="accesorioBombaAire">
+                            <label for="accesorioBombaAire">Bomba de Aire</label>
+                            <input type="checkbox" name="accesorioTimbre" id="accesorioTimbre">
+                            <label for="accesorioTimbre">Timbre</label>
+                            <input type="checkbox" name="accesorioFoco" id="accesorioFoco">
+                            <label for="accesorioFoco">Foco</label>
+                        </div>
+                    </div>
+                    <div class="formWrapper">
+                        <label for="marca">Marca</label>
+                        <input
+                            class="textFormulario"
+                            list="marcas"
+                            name="marca"
+                            id="marca"
+                        >
+                    </div>
+                    <div class="formWrapper">
+                        <datalist id="marcas">
+                            <option value="specialized">specialized</option>
+                            <option value="trek">trek</option>
+                            <option value="merida">merida</option>
+                            <option value="scott">scott</option>
+                            <option value="giant">giant</option>
+                            <option value="cube">cube</option>
+                            <option value="lapierre">lapierre</option>
+                            <option value="orbea">orbea</option>
+                            <option value="cannondale">cannondale</option>
+                            <option value="bmc">bmc</option>
+                            <option value="canyon">canyon</option>
+                            <option value="look">look</option>
+                            <option value="protek">protek</option>
+                            <option value="megamo">megamo</option>
+                            <option value="pinarello">pinarello</option>
+                            <option value="bianchi">bianchi</option>
+                            <option value="bh">bh</option>
+                            <option value="factor">factor</option>
+                            <option value="ghost">ghost</option>
+                            <option value="cervélo">cervélo</option>
+                            <option value="argon">argon</option>
+                        </datalist>
+                    </div>
+                    <div class="formWrapper">
+                        <input type="submit" value="Enviar">
+                        <input type="reset" value="Borrar">
+                    </div>
+                </form>
+            </section>
+        </div>
+    </body>
+</html>

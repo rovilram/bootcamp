@@ -1,0 +1,23 @@
+.wrapper {
+  width: 480px;
+  margin: 0 auto;
+  background-color: grey;
+}
+
+
+label {
+
+}
+
+.input {
+
+}
+
+.button {
+
+}
+
+div.formWrapper {
+  display: flex;
+  justify-content: space-around;
+}

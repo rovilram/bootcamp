@@ -1,0 +1,38 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+nav{
+    margin:auto;
+    width: 500px;
+}
+
+nav li a
+{
+    display:block;
+    text-decoration: none;
+    background-color: coral;
+    color:black;
+    padding: 10px 30px;
+
+}
+
+nav>ul>li {
+    float:left;
+}
+
+ul {
+    list-style-type:none;
+}
+
+ul.submenu {
+    display: none;
+}
+
+a.menuExpand:hover + ul{
+    display:inline;
+}
+
+.menuExpand {
+    background-color: red;
+}

@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 70px;
+}
+body {
+}
+
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  animation: animacionFondo 10s
+}
+
+.buenos,
+.malos,
+.inanimados {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.bueno {
+  /* transform: translate(500px, 0px);
+    transition: transform 10s; */
+    animation: animacionBuenos 10s;
+}
+
+.inanimado  {
+    animation: animacionInanimados 10s;
+}
+
+#bruja {
+    animation: animacionBruja 10s;
+}
+
+#dragon {
+    animation: animacionDragon 10s;
+}
+
+#nomo {
+    animation: animacionNomo 10s;
+}
+@keyframes animacionBuenos {
+    0% {
+        transform:none
+    }
+    100% {
+        transform: translate(300px, 0px);
+    }
+}
+
+@keyframes animacionInanimados {
+    0% {
+        transform: rotate(-45deg);
+    }
+
+    50% {
+        transform: rotate(45deg);
+    }
+
+    100% {
+        transform:none;
+    }
+}
+
+@keyframes animacionBruja {
+    0% {
+        transform:none;
+    }
+
+    50% {
+        transform: skew(20deg,20deg);
+        transform:matrix(1.87,-0.08,1.81,-1.18,-33,31);
+    }
+    100% {
+        transform:none;
+    }
+}
+
+@keyframes animacionDragon {
+    0% {
+        transform:none;
+    }
+    100% {
+        transform:scale(2);
+    }
+}
+
+@keyframes animacionNomo {
+    0% {
+        transform:none;
+    }
+    100% {
+        transform:rotate(360deg);
+    }
+}
+
+
+@keyframes animacionFondo {
+    0% {
+        background-color: blue;
+    }
+
+    20% {
+        background-color: red;
+    }
+
+    40% {
+        background-color: green;
+    }
+
+    60% {
+        background-color: pink;
+    }
+
+    80% {
+        background-color: yellow;
+    }
+
+    100% {
+        background-color: violet;
+    }
+}

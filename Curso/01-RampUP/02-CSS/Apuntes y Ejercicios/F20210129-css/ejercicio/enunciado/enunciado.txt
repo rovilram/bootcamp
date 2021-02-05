@@ -1,0 +1,4 @@
+EJERCICIO: 
+SPA (Single Page Application)
+Incluiremos los ejercicios practicados durante esta semana en una SPA que incluirá un menú horizontal en la cabecera, y que clicando en cada elemento del menú nos lleve a cada sección de esa página única.
+Maquetado con CSS (tablas ya prohibidas)

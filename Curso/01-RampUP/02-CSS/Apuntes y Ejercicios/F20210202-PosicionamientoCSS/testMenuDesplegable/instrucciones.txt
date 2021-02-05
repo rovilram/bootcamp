@@ -1,0 +1,19 @@
+sino recuerdo mal, para hacer el menú desplegable he tenido en cuenta:
+
+
+* He hecho un wrapper a <nav> para poner el tamaño a 960px
+* He puesto clases al ul.menu ul.submenu y al li.dropdown (li padre del ul.submenu)
+* paso los li a inline-block
+* el tamaño de los li lo he calculado de la siguiente forma:
+    - tengo en cuenta un padding horizontal del 2%
+    - Si tengo 4 enlaces al final tendré 2(% de padding)*2(uno a cada lado)*4(enlaces)=16% padding
+    - 100%-16=84% para meter entre 4 enlaces. Por lo tanto width=84/4 para cada enlace.
+    
+* pongo el li.dropdown como position:relative
+* pongo el ul.submenu como position:absolute
+* pongo el ul.submenu con width=100%
+* al principio el ul.submenu se oculta (display:none)
+* al hacer li.dropdown:hover hago que ul.submenu pase a display:block con esta regla:
+li.dropdown:hover ul.submenu {
+    display:block;
+}

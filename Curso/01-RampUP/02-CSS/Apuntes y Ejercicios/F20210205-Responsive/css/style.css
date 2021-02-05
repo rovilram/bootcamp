@@ -1,0 +1,53 @@
+/*
+Para hacer el diseño adaptativo con mobile first:
+* Decidimos el nº de breakpoints a aplicar.
+* en el CSS ponemos arriba los estilos para el dispositivo más pequeño (mobile).
+* Luego vamos añadiendo lo que vamos a cambiar
+*/
+
+/* 360px o menos*/
+/* Lo queremos todo en una columna, sin aire a los lados.*/
+.wrapper {
+    margin: 0 auto;
+    width: 100%; /* por que queremos que se ajuste a todos los anchos de viewport de menos de 360*/
+}
+.sectionsContainer {
+    display:flex;
+    flex-direction: column;
+}
+
+img,
+video,
+iframe {
+    width=100%;
+}
+
+
+/*  */
+/*de 3601x a 960px*/
+/* decidimos poner 2 columnas (una por section), y cada section tiene sus articulos en fila y un wrapper*/
+@media screen and (min-width: 361px) {
+    .sectionsContainer {
+        flex-direction: row; /* Solo ponemos los cambios*/
+    }
+    .wrapper {
+        width: 360px; /* Tiene que ajustarse al breakpoint anterior*/
+    }
+
+}
+/*  */
+/*961px o más*/
+@media screen and (min-width: 961px) {
+    .articleContainer {
+        display:flex;
+        flex-direction: row;
+    }
+    .wrappper {
+        width: 961px;
+    }
+
+}
+
+
+
+/*  */

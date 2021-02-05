@@ -1,0 +1,61 @@
+.wrapper {
+    width:960px;
+    margin: 0 auto;
+}
+
+body {
+    background-color:gray;
+}
+header {
+    text-align: center;
+}
+
+nav {
+    background-color:pink;
+}
+
+ul.menu, ul.submenu {
+    list-style-type: none;
+    padding:0;
+}
+
+
+ul.menu li {
+    background-color: black;
+    padding: 10px 2%;
+    display:inline-block;
+    width: 24.688%;
+    
+}
+
+ul.menu a {
+    color:white;
+    text-decoration:none;
+}
+
+ul.menu li {
+    padding: 0;
+}
+
+li.dropdown {
+    position:relative;
+}
+
+ul.submenu {
+    display:none;
+    position:absolute;
+    width: 100%;
+
+}
+
+ul.menu li:hover {
+    background-color:transparent;
+}
+
+li.dropdown:hover ul.submenu{
+    display:block;
+}
+
+ul.submenu>li {
+    width:100%;
+}

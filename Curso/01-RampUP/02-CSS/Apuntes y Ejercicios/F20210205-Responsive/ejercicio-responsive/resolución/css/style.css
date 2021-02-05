@@ -1,0 +1,54 @@
+header {
+    background-color:blue;
+    margin-bottom: 2px;
+    padding: 30px;
+
+
+}
+
+h1,h2 {
+    margin: 2px 0;
+}
+
+#hero {
+    background-color:red;
+    margin-bottom: 2px;
+    padding: 30px;
+}
+
+#content {
+    background-color:green;
+    padding: 30px;
+
+}
+#sidebar {
+    background-color:violet;
+    padding: 30px;
+
+}
+#footer {
+    background-color:grey;
+    margin:2px 0;
+    padding: 30px;
+
+}
+
+@media screen and (min-width:480px) {
+    #sectionWrapper {
+        display:flex;
+        flex-direction: row;
+    }
+    #content {
+        flex-basis: 66%;
+    }
+    #sidebar {
+        flex-basis: 34%;
+    }
+}
+
+@media screen and (min-width: 961px) {
+    .wrapper {
+        width:960px;
+        margin: 0px auto;
+    }
+}

@@ -1,0 +1,17 @@
+table.manji {
+    border-collapse: collapse;
+    width:250px;
+    height:250px;
+}
+table.manji .black {
+    border:1px hidden;
+    background-color: black;
+}
+table.manji .white {
+    border:1px hidden;
+    background-color: white;
+}
+table.manji td{
+    height: 25px;
+    width: 25px;
+}

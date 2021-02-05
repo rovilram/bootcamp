@@ -1,0 +1,12 @@
+Convención de nombres:
+    * camelCase  (lowerCamelCase)<---- Usamos estes
+    * upperCamelCase
+    * kebab-case
+    * snake-case
+
+    Empezar siempre con letras (no usar ni números ni caracteres especiales)
+    Caracteres anglosajones
+    No usar Espacios
+
+En los atributos de las etiquetas HTML usar comillas DOBLES "
+

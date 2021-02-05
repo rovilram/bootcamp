@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Leto's SinglePageApplication</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/factura.css">
+        <link rel="stylesheet" href="css/formularios.css">
+        <link rel="stylesheet" href="css/gatete.css">
+        <link rel="stylesheet" href="css/manjis.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Londrina+Shadow&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>Yo creía que un SPA era otra cosa...</header>
+        <nav>
+            <ul class="menu">
+                <li>
+                    <a href="#maestro">Maestro/detalle</a>
+                </li>
+                <li>
+                    <a href="#factura">Factura</a>
+                </li>
+                <li>
+                    <a href="#manjis">Manjis</a>
+                </li>
+                <li>
+                    <a href="#gatetes">Gatetes y Cascadas</a>
+                </li>
+                <li class="addMenu">
+                    <a href="#viejuner">El Club Viejuner</a>
+                        <ul class="submenu">
+                            <li>
+                                <a href="#entraClub">Entra al Club</a>
+                            </li>
+                            <li>
+                                <a href="#ladronzuelos">Denuncia robo bicicleta</a>
+                            </li>
+                        </ul>
+                </li>
+
+            </ul>
+        </nav>
+
+        <h1>Mi "Portfolio"</h1>
+        <section id="maestro">
+            <h2>Mi Colección</h2>
+            <section>
+                <h3>Música</h3>
+                <article>
+                    <h4>Toundra</h4>
+                    <figure>
+                        <img src="img/toundra.jpg" alt="Toundra">
+                    </figure>
+                    <a href="detalle-Toundra.html" target="none">Más información</a>
+                </article>
+                <article>
+                    <h4>The Ocean</h4>
+                    <figure>
+                        <img src="img/theOcean.jpeg" alt="The Ocean">
+                    </figure>
+                    <a href="detalle-Toundra.html" target="none">Más información</a>
+                </article>
+            </section>
+            <section>
+                <h3>Libros</h3>
+                <article>
+                    <h4>Frank Herbert</h4>
+                    <figure>
+                        <img src="img/herbert.jpg" alt="Frank Herbert">
+                    </figure>
+                    <a href="detalle-Herbert.html" target="none">Más información</a>
+                </article>
+                <article>
+                    <h4>J. R. R. Tolkien</h4>
+                    <figure>
+                        <img src="img/tokien.jpg" alt="J. R. R. Tolkien">
+                    </figure>
+                    <a href="detalle-Herbert.html" target="none"> Más información</a>
+                </article>
+            </section>
+        </section>
+        <section id="factura">
+            <h2>Factura</h2>
+            <table class="factura">
+                <tr class="head1">
+                    <td colspan="3">
+                        Invoice #123456789
+                    </td>
+                    <td>
+                        14 January 2025
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <span class="bold">
+                            Pay To:
+                        </span>
+                        <br>
+                        Acme Billing Co.
+                        <br>
+                        123 Main St.
+                        <br>
+                        Cityville, NA 12345
+                        <br>
+                    </td>
+                    <td colspan="2">
+                        <span class="bold">
+                            Customer:
+                        </span>
+                        <br>
+                        John Smith
+                        <br>
+                        321 Willow Way
+                        <br>
+                        Southeast Northwestershire, MA 54321
+                        <br>
+                    </td>
+                </tr>
+                <tr class="head1">
+                    <td class="quarter">
+                        Name / Description
+                    </td>
+                    <td class="quarter">
+                        Qty.
+                    </td>
+                    <td class="quarter">
+                        @
+                    </td>
+                    <td class="quarter">
+                        Cost
+                    </td>
+                </tr>
+                <tr>
+                    <td>Paperclips</td>
+                    <td>1000</td>
+                    <td>0.01</td>
+                    <td>10.00</td>
+                </tr>
+                <tr>
+                    <td>Staples (box)</td>
+                    <td>100</td>
+                    <td>1.00</td>
+                    <td>100.00</td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="head1">
+                        Subtotal
+                    </td>
+                    <td>110.00</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="head1">
+                        Tax
+                    </td>
+                    <td>8%</td>
+                    <td>8.80</td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="head1">
+                        Grand Total
+                    </td>
+                    <td>$ 118.80</td>
+                </tr>
+            </table>
+        </section>
+        <section id="manjis">
+            <h2>Manjis</h2>
+            <table class="manji">
+                <tr>
+                    <td class="black" colspan="3"></td>
+                    <td class="white"></td>
+                    <td class="black"></td>
+                </tr>
+                <tr>
+                    <td class="white" colspan="2"></td>
+                    <td class="black"></td>
+                    <td class="white"></td>
+                    <td class="black"></td>
+                </tr>
+                <tr>
+                    <td class="black" colspan="5"></td>
+                </tr>
+                <tr>
+                    <td class="black"></td>
+                    <td class="white"></td>
+                    <td class="black"></td>
+                    <td class="white" colspan="2"></td>
+                </tr>
+                <tr>
+                    <td class="black"></td>
+                    <td class="white"></td>
+                    <td class="black" colspan="3"></td>
+                </tr>
+            </table>
+            <br>
+            <br>
+            <br>
+            <table class="manji">
+                <tr>
+                    <td class="black" rowspan="3"></td>
+                    <td class="white" rowspan="2"></td>
+                    <td class="black" rowspan="5"></td>
+                    <td class="black" colspan="2"></td>
+                </tr>
+                <tr>
+                    <td class="white" colspan="2"></td>
+                </tr>
+                <tr>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black" rowspan="3"></td>
+                </tr>
+                <tr>
+                    <td class="white" colspan="2"></td>
+                    <td class="white"></td>
+                </tr>
+                <tr>
+                    <td class="black" colspan="2"></td>
+                    <td class="white"></td>
+                </tr>
+            </table>
+        </section>
+        <section id="gatetes">
+            <h2>Gatetes y Cascadas</h2>
+            <section>
+                <h3 id="fotografias">Fotografías</h3>
+                <article>
+                    <h4 id="fotoGato">Gatetes</h4>
+                    <figure>
+                        <img class="gateteReduce" src="https://cdn.pixabay.com/photo/2014/11/30/14/11/cat-551554__340.jpg" alt="Precioso gatito mirando a un punto fijo">
+                    </figure>
+                    <figure>
+                        <img class="gateteReduce" src="https://cdn.pixabay.com/photo/2016/09/05/21/37/cat-1647775__340.jpg" alt="Precioso gatito encima de un arbol">
+                    </figure>
+                </article>
+                <article>
+                    <h4 id="fotoCascada">Cascadas</h4>
+                    <figure>
+                        <img class="gateteReduce" src="https://cdn.pixabay.com/photo/2016/11/19/18/57/godafoss-1840758__340.jpg" alt="una preciosa cascada">
+                    </figure>
+                    <figure>
+                        <img class="gateteReduce" src="https://cdn.pixabay.com/photo/2015/07/02/10/45/waterfall-828948__340.jpg" alt="como no otra preciosa cascada">
+                    </figure>
+                </article>
+            </section>
+            <section>
+                <h3 id="videos">Videos</h3>
+                <article>
+                    <h4 id="videoGato">Gatetes</h4>
+                    <video class="gateteReduce" src="media/kittie1.mp4" controls>
+                        Video de un precioso gatito
+                    </video>
+                    <video class="gateteReduce" src="media/kittie2.mp4" controls>
+                        Video de otro precioso gatito
+                    </video>
+                </article>
+                <article>
+                    <h3 id="videoCascada">Cascadas</h3>
+                    <video class="gateteReduce" src="media/cascada1.mp4" controls>
+                        Video de bella cascada
+                    </video>
+                    <video class="gateteReduce" src="media/cascada2.mp4" controls>
+                        Otro video de bella cascada
+                    </video>
+                </article>
+            </section>
+            <section>
+                <h3 id="sonidos">Sonidos</h3>
+                <article>
+                    <h4 id="audioGato">Gatetes</h4>
+                    <audio src="media/cat.mp3" controls></audio>
+                </article>
+                <article>
+                    <h4 id="audioCascada">Cascadas</h4>
+                    <audio src="media/waterfall.mp3" controls></audio>
+                </article>
+            </section>
+        </section>
+        <section id="viejuner">
+            <h2>El Club Viejuner</h2>
+            <article>
+                <h3 id="entraClub">Únete al Club</h3>
+                <form action="https://www.w3schools.com/action_page.php" method="POST">
+                    <table class="formulario">
+                        <tr>
+                            <td colspan="2">
+                                <h4>Sobre tí</h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="labelFormulario">
+                                <label for="nombre">Nombre*</label>
+                            </td>
+                            <td>
+                                <input
+                                    class="textFormulario"
+                                    type="text"
+                                    name="nombre"
+                                    id="nombre"
+                                    required
+                                    tabindex="1"
+                                >
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="labelFormulario">
+                                <label for="apellidos">Apellidos*</label>
+                            </td>
+                            <td>
+                                <input
+                                    class="textFormulario"
+                                    type="text"
+                                    name="apellidos"
+                                    id="apellidos"
+                                    required
+                                    tabindex="2"
+                                >
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="labelFormulario">
+                                <label for="edad">Edad*</label>
+                            </td>
+                            <td>
+                                <input
+                                    class="textFormulario"
+                                    type="number"
+                                    name="edad"
+                                    id="edad"
+                                    required
+                                    tabindex="3"
+                                >
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="labelFormulario">
+                                Sexo*
+                            </td>
+                            <td>
+                                <input
+                                    type="radio"
+                                    name="sexo"
+                                    id="sexoH"
+                                    value="Hombre"
+                                    tabindex="4"
+                                    required
+                                >
+                                <label for="sexoH">Hombre</label>
+                                <input
+                                    type="radio"
+                                    name="sexo"
+                                    id="sexoM"
+                                    value="Mujer"
+                                    tabindex="4"
+                                >
+                                <label for="sexoM">Mujer</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="labelFormulario">
+                                <label for="viejunerBool">Me siento Viejuno!!</label>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="viejunerBool" id="viejunerBool">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="labelFormulario">
+                                <label for="sobreMi">Hablame de ti</label>
+                            </td>
+                            <td>
+                                <textarea class="textFormulario" name="sobreMi" id="sobreMi"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="text-align: center;">
+                                <h4>Tus circunstancias</h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="labelFormulario">
+                                <label for="email">Correo electrónico</label>
+                            </td>
+                            <td>
+                                <input
+                                    class="textFormulario"
+                                    type="email"
+                                    name="email"
+                                    id="email"
+                                    required
+                                    tabindex="5"
+                                >
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="labelFormulario">
+                                <label for="telefono">Teléfono</label>
+                            </td>
+                            <td>
+                                <input
+                                    class="textFormulario"
+                                    type="tel"
+                                    name="telefono"
+                                    id="telefono"
+                                    required
+                                    tabindex="6"
+                                >
+                            </td>
+                        </tr>
+                        <tr style="text-align: center;">
+                            <td>
+                                <input type="submit" value="Enviar">
+                            </td>
+                            <td>
+                                <input type="reset" value="Borrar">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </article>
+        </section>
+        <article id="ladronzuelos">
+            <form action="https://www.w3schools.com/action_page.php" method="POST">
+                <table class="formulario">
+                    <tr>
+                        <td colspan="2">
+                            <h3>Los ladronzuelos de bicicletas</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="labelFormulario">
+                            <label for="fecha">Día</label>
+                        </td>
+                        <td>
+                            <input
+                                class="textFormulario"
+                                type="date"
+                                name="fecha"
+                                id="fecha"
+                            >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="labelFormulario">
+                            <label for="hora">Hora</label>
+                        </td>
+                        <td>
+                            <input
+                                class="textFormulario"
+                                type="time"
+                                name="hora"
+                                id="hora"
+                            >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="labelFormulario">
+                            <label for="colorBicicleta">Color de la Bicicleta</label>
+                        </td>
+                        <td>
+                            <input
+                                class="textFormulario"
+                                type="color"
+                                name="colorBicicleta"
+                                id="colorBicicleta"
+                            >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="labelFormulario">
+                            <label for="precio">Precio</label>
+                        </td>
+                        <td>
+                            <input
+                                class="textFormulario"
+                                type="range"
+                                name="precio"
+                                id="precio"
+                                min="0"
+                                max="1000"
+                            >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="labelFormulario">
+                            <label for="tipoBicicleta">Tipo de bicicleta</label>
+                        </td>
+                        <td>
+                            <select class="textFormulario" name="tipoBicicleta" id="tipoBicicleta">
+                                <option value="" disabled selected>-- Elige tu bicicleta --</option>
+                                <optgroup label="Paseo">
+                                    <option value="paseoSenyorial">Señorial</option>
+                                    <option value="paseoAntiplebeyos">Anti-plebeyos</option>
+                                    <option value="paseoPorEncimaDelHombro">PorEncimaDelHombro</option>
+                                </optgroup>
+                                <optgroup label="Montaña">
+                                    <option value="montanyaGamusinos">Gamusinos</option>
+                                    <option value="montanyaHueleFlores">Hueleflores premium</option>
+                                    <option value="montanyaFangoLover">Fango lover</option>
+                                </optgroup>
+                                <optgroup label="Carreras">
+                                    <option value="carrerasMetroymedio">Metroymedio</option>
+                                    <option value="carrera3deLaTarde">3 de la tarde. Fluorescente edition</option>
+                                    <option value="carreraGrupitors">Grupitors</option>
+                                </optgroup>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="labelFormulario">Accesorios</td>
+                        <td>
+                            <input type="checkbox" name="accesorioRuedines" id="accesorioRuedines">
+                            <label for="accesorioRuedines">Ruedines</label>
+                            <input type="checkbox" name="accesorioPegatinas" id="accesorioPegatinas">
+                            <label for="accesorioPegatinas">Pegatinas</label>
+                            <input type="checkbox" name="accesorioCestita" id="accesorioCestita">
+                            <label for="accesorioCestita">Cestita</label>
+                            <input type="checkbox" name="accesorioBombaAire" id="accesorioBombaAire">
+                            <label for="accesorioBombaAire">Bomba de Aire</label>
+                            <input type="checkbox" name="accesorioTimbre" id="accesorioTimbre">
+                            <label for="accesorioTimbre">Timbre</label>
+                            <input type="checkbox" name="accesorioFoco" id="accesorioFoco">
+                            <label for="accesorioFoco">Foco</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="labelFormulario">
+                            <label for="marca">Marca</label>
+                        </td>
+                        <td>
+                            <input
+                                class="textFormulario"
+                                list="marcas"
+                                name="marca"
+                                id="marca"
+                            >
+                            <datalist id="marcas">
+                                <option value="specialized">specialized</option>
+                                <option value="trek">trek</option>
+                                <option value="merida">merida</option>
+                                <option value="scott">scott</option>
+                                <option value="giant">giant</option>
+                                <option value="cube">cube</option>
+                                <option value="lapierre">lapierre</option>
+                                <option value="orbea">orbea</option>
+                                <option value="cannondale">cannondale</option>
+                                <option value="bmc">bmc</option>
+                                <option value="canyon">canyon</option>
+                                <option value="look">look</option>
+                                <option value="protek">protek</option>
+                                <option value="megamo">megamo</option>
+                                <option value="pinarello">pinarello</option>
+                                <option value="bianchi">bianchi</option>
+                                <option value="bh">bh</option>
+                                <option value="factor">factor</option>
+                                <option value="ghost">ghost</option>
+                                <option value="cervélo">cervélo</option>
+                                <option value="argon">argon</option>
+                            </datalist>
+                        </td>
+                    </tr>
+                    <tr style="text-align: center;">
+                        <td>
+                            <input type="submit" value="Enviar">
+                        </td>
+                        <td>
+                            <input type="reset" value="Borrar">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </article>
+    </section>
+    <footer>
+        &copy; Yo Mismo 2021
+        <small>
+            es importante que te leas la letra pequeña de esta página... que lo sepas!
+        </small>
+    </footer>
+</body>
+</html>

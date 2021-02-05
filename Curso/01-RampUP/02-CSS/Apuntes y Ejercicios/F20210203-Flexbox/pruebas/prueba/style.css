@@ -1,0 +1,10 @@
+.wrapper {
+  width: 960px;
+  margin: 0 auto;
+  background-color: grey;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-around;
+}

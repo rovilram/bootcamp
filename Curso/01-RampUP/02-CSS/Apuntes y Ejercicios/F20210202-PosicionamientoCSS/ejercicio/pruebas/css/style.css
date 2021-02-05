@@ -1,0 +1,42 @@
+*{
+    padding:0;
+    margin:0;
+}
+.wrapper {
+    margin:0 auto;
+    width:980px;
+}
+
+body{
+    background-color:lightsalmon;
+}
+
+header{
+    background-color: linen;
+    font-size:xx-large;
+    text-align:center;
+    padding:10px 0;
+}
+ul.menu {
+    margin:0 22%;
+}
+
+ul.menu li {
+    list-style-type: none;
+    background-color:black;
+    display:inline-block;
+    padding: 10px 2%;
+    width: 10%;
+}
+
+ul.menu li a {
+    color:white;
+    text-decoration: none;
+}
+
+ul.submenu {
+    display:none;
+}
+
+
+

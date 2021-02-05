@@ -1,0 +1,24 @@
+PLUGINS
+* tema de colores DRACULA THEME
+* live server
+
+
+
+AJUSTAR TEXTO A LA PANTALLA (WRAP) ALT+Z
+
+ENVOLVER UN TEXTO CON UNA ETIQUETA: CTRL+P / wrap / etiqueta
+
+EMMET Generar varios elementos iguales: p*3 / ol>li*4 / ol>(li>ul>li*3)+(li*3)
+
+CTRL+ SPACE Vuelve a evaluar un EMMET
+
+MODIFICAR VARIOS ELEMENTOS A LA VEZ: marcar presionando CTRL 
+
+SELECCIONAR PALABRA: CTRL + d
+
+COMENTAR TODO UNA LINEA: CTRL + MAYUS + 7
+
+CTRL + F: Para buscar lo seleccionado
+CTRL + H: Para buscar y reemplazar lo seleccionado
+
+ARRASTRANDO UNA ARCHIVO podemos dividir pantalla.

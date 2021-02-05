@@ -1,0 +1,109 @@
+
+
+body {
+    margin:0px; 
+    font-family: sans-serif;
+    font-size: small;
+    --bg-color: #cccccc;
+
+}
+
+
+header {
+    font-size: xx-large;
+    text-align: center;
+    background-color:var(--bg-color);
+    margin: 0px;
+    padding: 30px 0;
+    font-family: 'Londrina Solid', cursive;
+    font-weight: bold;
+}
+
+
+
+h1,h2 {
+    text-align: center;
+    font-family: 'Londrina Shadow', cursive;
+}
+h3,h4{
+    font-family: 'Londrina Solid', cursive;
+    font-weight: normal;
+
+}
+
+section{
+    margin: 10px auto ;
+    background-color: var(--bg-color);
+    width: 80%;
+}
+
+article {
+    width: 80%;
+    margin: 5px auto;
+    border-style: solid;
+    text-align:center;
+    background-color:#E5E7E9;
+}
+table {
+    width:80%;
+    margin: 10px auto;
+    background-color: white;
+}
+
+footer {
+    text-align: center;
+    padding:20px 0;
+    background-color: var(--bg-color);
+    font-weight: bold;
+
+}
+
+nav {
+    overflow: hidden;
+}
+
+ul.menu>li {
+    list-style-type:none;
+    display:inline;
+    margin:0px 3%;
+    padding: 15px;
+    float:left;
+}
+ul.menu a {
+    padding:10px;
+    margin:15px;
+}
+
+
+
+ul.submenu {
+    list-style-type:none;
+    padding:0px;
+    visibility:hidden;
+
+}
+ul.submenu li {
+    margin:10px 0;
+}
+
+ul.menu>li:hover>a {
+
+    background-color: var(--bg-color);
+    font-weight: bold;
+    border-radius: 10px;
+
+}
+
+ul.submenu>li:hover>a {
+    font-weight: bold   ;
+}
+
+ul.menu li a{
+    text-decoration:none;
+    color: black;
+}
+
+ul.menu li.addMenu:hover>ul.submenu {
+    visibility:visible;
+}
+
