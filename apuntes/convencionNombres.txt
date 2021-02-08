@@ -1,4 +1,4 @@
-Convención de nombres:
+#Convención de nombres: (En lo posible en inglés)
     * camelCase  (lowerCamelCase)<---- Usamos estes
     * upperCamelCase
     * kebab-case
@@ -10,3 +10,6 @@ Convención de nombres:
 
 En los atributos de las etiquetas HTML usar comillas DOBLES "
 
+##En JS
+Usar camelCase en todo lo posible.
+CONSTANTES: Ponerlas en mayúsculas (con SNAKE_CASE)
