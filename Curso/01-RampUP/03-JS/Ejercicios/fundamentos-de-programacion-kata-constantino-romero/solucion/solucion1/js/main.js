@@ -35,6 +35,8 @@ const pregunta = {
 }
 
 
+//MÉTODO 1: Usando el innerHTML de un elemento que que ya está en el DOM
+
 function imprimeTitulo(titulo) {
     let response="";
     response=`<p>${titulo}</p>`;
@@ -72,3 +74,5 @@ function imprimePregunta(pregunta) {
 }
 
 imprimePregunta(pregunta);
+
+

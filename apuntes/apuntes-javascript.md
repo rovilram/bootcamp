@@ -63,3 +63,4 @@ Para entrar a las propiedades lo hacemos así: `me.name;`
 Podemos cambiar incluso de ellas: `me.name="Max Power";` (si no existiera esa propiedad del objeto `me` se añadiría.)
 
 Los objetos se pasan por referencia. Hay que tener cuidado ya que si "copiamos" un objeto en otro, cuando cambiamos una propiedad del segundo, vamos a modificar el primero. Esto mismo le pasa a un Array.
+
