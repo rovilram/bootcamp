@@ -1,7 +1,7 @@
 ✔ Ver errores del HTML @done(21-02-03 18:18)
 ✘ Arreglar a Lola Flores @started(21-02-03 18:22) @cancelled(21-02-03 19:13) @wasted(51m1s) NO HE PODIDO
 ✔ Hacer ejemplo menú con flex @done(21-02-03 17:48)
-☐ Ver las transiciones. Como meterlas en el menú desplegable. transition opacity 10s;
+✔ Ver las transiciones. Como meterlas en el menú desplegable. transition opacity 10s; @done(21-02-15 17:15)
 ✔ meter el menú en nuestro ejercicio @started(21-02-03 19:13) @done(21-02-03 19:52) @lasted(39m3s)
 ✔ poner en apuntes la solucion para el espacio entre cajas del menú @done(21-02-03 20:07)
-☐ En apuntes Mirar origen de coordenadas de cada "position"
+✔ En apuntes Mirar origen de coordenadas de cada "position" @done(21-02-15 17:15)
