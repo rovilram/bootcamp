@@ -7,7 +7,9 @@ Es un lenguaje Turing-completo (3a Generación). Tienen:
 un archivo.js se llama desde html con:
 `<script src="js/archivo.js"></script>`
 y se pueden llamar tantos como sea necesario en un mismo html.
-
+ponerlo al final del `<body>` para que cargue todo el html antes de empezar el script.
+También se puede poner en el `<head>` siempre que añadamos la palabra **defer**:
+`<script defer src="js/archivo.js"></script>`
 /_Me he cargado los apuntes del primer día de JS, no se como_/
 
 ##Notas:

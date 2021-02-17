@@ -22,3 +22,9 @@ No podemos definir parámetros dentro de esa llamada a la callback. Tenemos que 
 
 Podemos cambiar el nombre de la clase de un elemento con:
 `pos00.getElementById("position0_0).classname="nombreClase";`
+
+También podemos añadir clases o quitarlas con `.classList.add` o `.classList.remove`
+
+Para modificar el texto de un elemento podemos usar las propiedades `.innerHTML` o `.innerText`. Mejor usar **`.innerText`** ya que no parsea el HTML que le introducimos, y si quisieramos meter HTML en otro la forma que hay que hacer es crear nodos con .createEvent() y appendChild();
+
+

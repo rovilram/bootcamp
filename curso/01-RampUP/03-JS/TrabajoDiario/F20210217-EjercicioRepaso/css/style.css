@@ -1,0 +1,19 @@
+.button {
+    padding: 10px;
+    color: white;
+    background-color: black ;
+    border-radius: 2px;
+    text-align: center;
+}
+/* En las clases css ya guardamos los posibles estados
+ El texto lo cambiaremos desde JS 
+*/
+ .on {
+    background-color: green;
+}
+.off {
+    background-color: red;
+}
+.center {
+    text-align: center;
+}
