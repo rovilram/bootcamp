@@ -37,7 +37,7 @@ const getColors = (lightNum) => {
     //metemos ya unos cuantos colores predefinidos
     const colorsArray = ["black", "green", "orange", "red"];
     //si se necesitan más colores los generamos
-    if (lightNum > 4) {
+    if (lightNum > 3) {
         for (let i = 0; i < lightNum; i++) {
             //calculamos cada componente aparte
             let red = Math.ceil(Math.random() * 255);

@@ -6,7 +6,7 @@ Se pide:
     ✔ Estado 1: Verde la primera y el resto negro. @done(21-02-17 16:09)
     ✔ Estado 2: Ámbar la segunda y el resto negro. @done(21-02-17 16:09)
     ✔ Estado 3: Rojo la tercera y el resto negro. @done(21-02-17 16:09)
-☐ Level 3)
-    ☐ Otro botón que haga reset
-    ☐ Caja de texto que pide el número de luces
-    ☐ (Como máximo habrá (255 x 255 x 255) - 1 colores posibles)
+✔ Level 3) @done(21-02-18 11:52)
+    ✔ Otro botón que haga reset @done(21-02-18 11:52)
+    ✔ Caja de texto que pide el número de luces @done(21-02-18 11:52)
+    ✘ (Como máximo habrá (255 x 255 x 255) - 1 colores posibles) @cancelled(21-02-18 11:52)
