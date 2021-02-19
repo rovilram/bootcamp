@@ -18,6 +18,8 @@ No podemos definir parámetros dentro de esa llamada a la callback. Tenemos que 
     putToken(currentToken, this.id);
 });`
 
+Otros eventos:
+    "change" se lanza cada vez que un elemento HTML cambia (un input).
 
 
 Podemos cambiar el nombre de la clase de un elemento con:
