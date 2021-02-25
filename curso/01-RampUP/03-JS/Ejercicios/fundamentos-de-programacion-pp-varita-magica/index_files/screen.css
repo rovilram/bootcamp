@@ -1052,7 +1052,7 @@ table {
         font-size: 1.1rem;
     }
 
-    /* fix tables for mobile, if they need to be larger than 320px */
+    /* fiix tables for mobile, if they need to be larger than 320px */
     table.reformat-mobile, table.reformat-mobile tr, table.reformat-mobile td  {
         display: block;
     }

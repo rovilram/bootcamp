@@ -72,7 +72,6 @@ header{
     width:100%;
 } 
 
-//TODO: Mirar origen de coordenadas de cada "position"
 
 *position: absolute; El elemento se sale del modelo de caja, y se posiciona con un top/right, left/right respecto al (0,0) (esquina superior izquierda). El padre en este caso va a ser el <body>
 Se diferencia del "fixed" en que se mueve con el scroll.

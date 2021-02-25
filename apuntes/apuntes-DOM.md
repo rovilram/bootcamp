@@ -30,3 +30,16 @@ También podemos añadir clases o quitarlas con `.classList.add` o `.classList.r
 Para modificar el texto de un elemento podemos usar las propiedades `.innerHTML` o `.innerText`. Mejor usar **`.innerText`** ya que no parsea el HTML que le introducimos, y si quisieramos meter HTML en otro la forma que hay que hacer es crear nodos con .createEvent() y appendChild();
 
 
+## Métodos para seleccionar elemento del DOM
+getElementByID()
+
+getElementsByTagName() (devuelve *todos* los elementos de un tipo (p, a, ...))
+    Devuelve una HTMLCollection. tener en cuenta que **no** se puede recorrer con un foreach.
+    Para convertir un HTMLCollection podemos usar por ejemplo `Array.from(HTMLCollection).forEach()`
+    Esto mismo nos va a pasar con todos los *getElements*
+
+querySelector() Va a buscar por un *selector CSS*
+    En el selector CSS buscamos cualquier cosa tal y como lo ponemos en el '.css'
+    Devuelve el primer elemento que cumpla ese selector CSS. Lo devuelve en forma de nodoHTML
+
+querySelectorAll() También busca por *selector CSS* y devuelve un nodeList, que sí es iterable en un forEach

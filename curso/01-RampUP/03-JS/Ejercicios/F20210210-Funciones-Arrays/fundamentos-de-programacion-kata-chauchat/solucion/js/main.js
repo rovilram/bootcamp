@@ -73,7 +73,6 @@ function chauchat2(cargador) {
 //chauchat2(cargador);
 
 
-//TODO: HACER LA FUNCIÓN TENIENDO EN CUENTA QUE EL "ENCASQUILLAO" PASA AL INICIO (ES DECIR O SUELTA RÁFAGA O NO). Y TENIENDO EN CUENTA QUE EL PARÁMETRO ES EL NÚMERO DE DISPAROS QUE QUEREMOS DISPARAR Y EL CARGADOR ESTÁ DENTRO DE LA FUNCIÓN.
 
 function chauchat3(disparos) {
     let cargador = ["pium!", "pium!", "pium!", "pium!", "pium!", "pium!", "pium!"];
