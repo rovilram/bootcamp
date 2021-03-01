@@ -13,3 +13,5 @@ En los atributos de las etiquetas HTML usar comillas DOBLES "
 ##En JS
 Usar camelCase en todo lo posible.
 CONSTANTES: Ponerlas en mayúsculas (con SNAKE_CASE)
+
+Clases: Usar la primera letra en MAYÚSCULAS

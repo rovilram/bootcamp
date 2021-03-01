@@ -26,6 +26,14 @@ También se puede poner en el `<head>` siempre que añadamos la palabra **defer*
   Admiten tabuladores y saltos de linea.
   Nos permite por ejemplo usar dentro un _operador ternario_
 
+- **use strict** `"use strict";`
+  Hace que una vez definido, el código debe cumplir una serie de cosas, como por ejemplo:
+  - Hay que _declarar_ todas las variables antes de su uso.
+  - No deja usar _delete_ de variables
+  - el _arguments_ de las funciones no es válido,
+    \*...
+    El modo estricto se puede definir por ámbito (scope).
+
 ## BUCLES
 
 Es necesario:
@@ -120,7 +128,7 @@ Es necesariamente una funcion anónima, pero la _referencia_ a la función anón
 `const funcionA = () => {}` es lo mismo que `function funcionA () {}`
 Si la función flecha tiene un return, y es de una única linea, no hace falta poner el return:
 `const suma = (a,b) => return a+b` es lo mismo que `const suma = (a,b) => a+b`
-Si una función flecha devuelve un *JSON*, siempre es obligatorio las llaves y el return:
+Si una función flecha devuelve un _JSON_, siempre es obligatorio las llaves y el return:
 `(number)=> { return { n:number } };`
 Cuando tenemos un único parámetro los "()" son opcionales:
 `const cuadrado = (a) => a*a` es lo mismo que `const cuadrado = a => a*a`
@@ -163,26 +171,117 @@ Igual lo podemos hacer con objetos: `let {a2,b2,...rest2} = {a2:10, b2:20, c2:30
 
 ### Array helpers
 
-Los helpers son ayudas para hacer una serie de tareas de uso común. Los array helpers son funciones que van a hacer ciertas operaciones comunes en arrays(**Solo para arrays**). Todas esas funciones van a devolver un array, cosa que el forEach no hace. 
+Los helpers son ayudas para hacer una serie de tareas de uso común. Los array helpers son funciones que van a hacer ciertas operaciones comunes en arrays(**Solo para arrays**). Todas esas funciones van a devolver un array, cosa que el forEach no hace.
 
 #### map
+
 **no es lo mismo** que el objeto **Map**. ver para que es porque puede ser útil.
 Por ejemplo para multiplicar por dos todos los elementos del array haríamos algo como esto:
 `numbers.forEach(numbers2= numbers2.map (number=> number*number); => {array[index]=number*2;});`
 y lo podemos hacer con map:
 `numbers= numbers.map (number=> number*2);`
-Si la asignación de la hacemos a otro array, directamente hacemos un *array nuevo* (no es una referencia como cuando asignamos dos arrays normalmente):
+Si la asignación de la hacemos a otro array, directamente hacemos un _array nuevo_ (no es una referencia como cuando asignamos dos arrays normalmente):
 `numbers2 = numbers.map(number=>number*2)`Es un array completamente nuevo, no una referencia a numbers.
 Los parámetros de map son los mismos que forEach (number, index, array)
 
 #### filter
+
 Nos sirve para separar unos valores de los de un array, metiéndolos en un nuevo array
 Sus parámetro es una función flecha que recoge una expresión booleana, además de los dos parámetros opcionales index y array.
 Va a pasar esa expresión a todos los elementos y va a devolver los que cumplan dicha expresión.
 Así para sacar los números pares de un array y meterlo en otro: `let numEven = numbers.filter((number) => number % 2 === 0);`
 
 #### reduce
-No devuelve un array, devuelve *un solo valor* resultante de procesar todos los elementos con la función que pasemos como parámetro.
+
+No devuelve un array, devuelve _un solo valor_ resultante de procesar todos los elementos con la función que pasemos como parámetro.
 Los parámetros de la función son el acumulador y el elemento (y los otros dos igual que las otras 2 funciones.)
 Así para hacer un sumatorio:
 `let total = numbers3.reduce((sum, number)=> sum+number);`
+
+## ASINCRONÍA
+
+JS es un lenguaje de programación **síncrono**: hace una operación detrás de otra en un cierto orden.
+Aún siendo síncrono, tiene _capacidad_ de manejar la _asincronía_
+NOTA: Para los lenguajes de programación que sí son asíncronos, ver esto: https://es.wikipedia.org/wiki/Problema_de_la_cena_de_los_fil%C3%B3sofos
+JS es un **monohilo**: solo puede realizar una cosa a la vez y en orden.
+
+como es monohilo siempre va a ir orden a orden y siempre va a acabar la orden que le ha llegado primero.
+
+### PROMISES
+
+`const myPromise = new Promise(function(resolve){}, function(rejectFunction) {});`
+Va a recibir un parámetro que es una función (que es la operación asíncrona que no sabemos cuando va a acabar), que a su vez va a tener como poco un parámetro que va a ser la función resolvedora la función que va a realizarse cuando el evento asíncrono se realice.
+Luego hacemos la llamada a la promesa y definimos en .then() la función que va a e
+`myPromise.then(() => sayHello("Hola 6"));`
+con .catch () definimos la función que ocurriría cuando no ocurre el evento asíncrono. Que será el segundo parámetro de la promesa (rejectFunction)
+
+### FETCH
+
+Nos va a hacer las promises necesarias para entrar a un API por ejemplo.
+`fetch('url').then()`
+TODO: Investigar sobre promises y fetch
+
+## PROGRAMACIÓN ORIENTADA A OBJETOS (POO)
+
+Vamos a tener objetos, donde se definirán sus características (_propiedades_) y sus procesos (_métodos_).
+Van a estar **encapsulados**, de forma que un objeto no va a poder tocar las características de otro. Para ello cada objeto va a tener métodos a través de los cuales se van a poder modificar sus propiedades.
+
+Por ejemplo el objeto _caballo_ va a tener la propiedad _velocidad_, y el método _correr_ que va a poder modificar la velocidad (y que puede ser llamado por otro objeto (por ejemplo _jinete_)).
+
+Dentro de un método vamos a poder llamar a las propiedades del propio objeto usando **this**: `this.speed`
+
+Vamos a tener unos moldes (_clases_) a partir de la cual vamos a crear nuevo a objetos. Para ello empleamos el _operador_ **new**. Con ella **instanciamos** una clase (una instancia es lo mismo que un objeto).
+
+```javascript
+function Horse() {
+  this.speed = 0;
+  this.run = function () {
+    this.speed++;
+  };
+}
+```
+
+Esta función Horse() es una función constructora.
+
+Todas las instancias de una clase van a ser _iguales_ (van a tener iguales métodos y propiedades), pero pueden tener distintos valores de ellas. (**modularidad** del código).
+Los demás objetos van a poder ver todos los métodos y propiedades que nosotros decidamos públicos. Esta es la _interfaz_ de nuestro objeto. (_las propiedades no deberían ser accesibles públicamente_ debe accederse a ellos con métodos _get_ y _set_)
+
+Para hacer que una propiedad no sea visible desde el exterior (no sea pública) tenemos que declararla dentro del objeto (con let por ejemplo), y no referenciarlo con _this_.
+
+```javascript
+function Horse() {
+  let speed = 0;
+  this.run = function () {
+    let.speed++;
+  };
+}
+```
+
+Las propiedades de cada objeto individual van a ser independientes de las de otros objetos instanciados del mismo molde (clase).
+Los métodos de los objetos van a ser **referencias** a los métodos de la clase.
+
+Con la **herencia** vamos a poder instanciar objetos que tienen los métodos y propiedades de una determinada clase, pero además se _extiende_ con otros propios. Además los métodos y propiedades heredados pueden estar _modificados_ respecto a la clase de la que se hereda (redefine lo heredado _overriding_).
+
+La _herencia múltiple_ (heredar de dos clases distintas) no tienen sintaxis propia para ello, aunque se puede hacer. No lo vamos a ver aquí.
+
+Cuando redefinimos un método, vamos a hacer que dos objetos vayan a actuar de forma distinta ante la llamada a un método. Eso es el **polimorfismo**. Van a hacer cosas distintas ante una misma llamada. Tienen distinto comportamiento ante un mismo mensaje.
+Está ligado a la herencia, y a redefinir un método heredado.
+El polimorfismo ocurre en _tiempo de ejecución_. En tiempo de programación nosotros no sabemos que tipo de objeto va a tener una variable. Cuando se ejecuta, por ejemplo vamos a seleccionar que un caballo sea un caballo normal o un pura sangre, que ante el método _correr_ va a correr más rápido.
+
+La herencia hasta ES6 se hacía usando los _prototipos_. _A partir de ES6_ se usan las **clases**.
+
+Intermedio a la instanciacion usando funciones constructoras y usando clases, se puede instarciar un objeto usando objetos literales.
+```javascript
+const otherHorse = {
+  name: "pepe",
+  lifePoints: 10,
+  smoke: function () {
+    this.lifePoints--;
+  },
+};
+```
+Esta forma no nos permite hacer varias copias del molde, ni heredar, etc...
+Es como lo veníamos haciendo hasta ahora.
+
+a partir de ES6 cuando queremos varios objetos de un mismo molde, empleamos las **CLASES**
+
