@@ -1,8 +1,9 @@
 #HTML 1.0
 
 ##Referencia HTML
-w3schools.com
-developer.mozilla.org
+<w3schools.com>
+<developer.mozilla.org>
+<tutorialspoint.com>
 no son la oficial pero es mucho más cómoda que w3.org
 ##Webs útiles
 caniuse.com nos dice si determinado elemento html es válido para diversos navegadores

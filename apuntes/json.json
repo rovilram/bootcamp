@@ -1,0 +1,16 @@
+{
+    "messages": {
+        {
+            "timestamp": 1000,
+            "message: "hola"
+        },
+        {
+            "timestamp": 22,
+            "message: "sdsdfsdf"
+        },
+        {
+            "timestamp": 2333,
+            "message": "lorem"
+        }
+    }
+}
