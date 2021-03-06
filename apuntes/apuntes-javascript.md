@@ -207,19 +207,131 @@ JS es un **monohilo**: solo puede realizar una cosa a la vez y en orden.
 
 como es monohilo siempre va a ir orden a orden y siempre va a acabar la orden que le ha llegado primero.
 
+### CALLBACK
+
+Usamos la posibilidad que da JS de pasar una función como parámetro de otro.
+
+```javascript
+const movies = [
+  {
+    title: `A New Hope`,
+    body: `After Princess Leia, the leader of the Rebel Alliance, is held hostage by Darth Vader, Luke and Han Solo must free her and destroy the powerful weapon created by the Galactic Empire.`,
+  },
+];
+
+function getMovies() {
+  setTimeout(() => {
+    movies.forEach((movie, index) => {
+      console.log(movie.title);
+    });
+  }, 1000);
+}
+
+function createMovies(movie, callback) {
+  setTimeout(() => {
+    movies.push(movie);
+    callback();
+  }, 2000);
+}
+createMovies(
+  {
+    title: `Return of the Jedi`,
+    body: `Luke Skywalker attempts to bring his father back to the light side of the Force. 
+                At the same time, the rebels hatch a plan to destroy the second Death Star.`,
+  },
+  getMovies
+);
+```
+
+De esta forma vamos a hacer que la función getMovies no se ejecuta hasta que no ocurra createMovies (hemos encolado una tarea después de la otra, hasta que no ocurra la primera no va a ocurrir la segunda).
+
 ### PROMISES
 
-`const myPromise = new Promise(function(resolve){}, function(rejectFunction) {});`
-Va a recibir un parámetro que es una función (que es la operación asíncrona que no sabemos cuando va a acabar), que a su vez va a tener como poco un parámetro que va a ser la función resolvedora la función que va a realizarse cuando el evento asíncrono se realice.
-Luego hacemos la llamada a la promesa y definimos en .then() la función que va a e
-`myPromise.then(() => sayHello("Hola 6"));`
-con .catch () definimos la función que ocurriría cuando no ocurre el evento asíncrono. Que será el segundo parámetro de la promesa (rejectFunction)
+`const myPromise = new Promise(function(resolveFunction){}, function(rejectFunction) {});`
+Va a recibir un parámetro que es una función (resolveFunction en nuewstro ejemplo) (que es la operación asíncrona que no sabemos cuando va a acabar), que a su vez va a tener como poco un parámetro que va a ser la función resolvedora la función que va a realizarse cuando el evento asíncrono se realice.
+En la llamada a la promesa vamos a meter en .then() la función que va a ejecutarse cuando todo haya ido bién y cen catch () definimos la función que ocurriría cuando tenemos error en el evento asíncrono. Que será el segundo parámetro de la promesa (rejectFunction)
+
+````javascript
+const movies = [
+        { title: `A New Hope`, body:`After Princess Leia, the leader of the Rebel Alliance, is held hostage by Darth Vader, Luke and Han Solo must free her and destroy the powerful weapon created by the Galactic Empire.`}
+    ]
+function createMovies(movie){
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            movies.push(movie);
+            const error = false;
+            if(!error){
+                resolve();
+            }
+            else{
+                reject('Error: Something went wrong!')
+            }
+        }, 2000);
+    })  
+createMovies({ title: `Return of the Jedi`, body:`Luke Skywalker attempts to bring his father back to the light side of the Force. At the same time, the rebels hatch a plan to destroy the second Death Star.`})
+.then(getMovies); //esta es la función que va a ser llamada cuando se recibe la asíncrona
+.catch(error => console.log(error)) //función que ocurre cuando hay error
+}
+````
+
+
+### ASYNC / AWAIT
+
+````javascript
+async function example() {
+
+  let promise = new Promise((resolve, reject) => {
+    setTimeout(() => resolve("done!"), 2000)
+  });
+
+  let result = await promise; // wait until the promise resolves (*)
+
+  alert(result); // "done!"
+}
+
+example();
+
+````
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+createMovies({ title: `Return of the Jedi`, body:`Luke Skywalker attempts to bring his father back to the light side of the Force. At the same time, the rebels hatch a plan to destroy the second Death Star.`})
+.then(getMovies);
+
+
+
+
+
+
+
+
+
 
 ### FETCH
 
 Nos va a hacer las promises necesarias para entrar a un API por ejemplo.
 `fetch('url').then()`
 TODO: Investigar sobre promises y fetch
+
+
+
+
+
+
+
+
+
 
 ## PROGRAMACIÓN ORIENTADA A OBJETOS (POO)
 
@@ -239,7 +351,7 @@ function Horse() {
     this.speed++;
   };
 }
-```
+````
 
 Esta función Horse() es una función constructora.
 
@@ -271,6 +383,7 @@ El polimorfismo ocurre en _tiempo de ejecución_. En tiempo de programación nos
 La herencia hasta ES6 se hacía usando los _prototipos_. _A partir de ES6_ se usan las **clases**.
 
 Intermedio a la instanciacion usando funciones constructoras y usando clases, se puede instarciar un objeto usando objetos literales.
+
 ```javascript
 const otherHorse = {
   name: "pepe",
@@ -280,8 +393,8 @@ const otherHorse = {
   },
 };
 ```
+
 Esta forma no nos permite hacer varias copias del molde, ni heredar, etc...
 Es como lo veníamos haciendo hasta ahora.
 
 a partir de ES6 cuando queremos varios objetos de un mismo molde, empleamos las **CLASES**
-
