@@ -20,9 +20,10 @@ function printString(string) {
 // con await async
 function printPrecuela() {
   return new Promise((resolve, reject) => {
-    resolve(printString('Episodio I: la amenaza fantasma')
+    printString('Episodio I: la amenaza fantasma')
       .then(() => printString('Episodio II: el ataque de los clones'))
-      .then(() => printString('Episodio III: la venganza de los sith')))
+      .then(() => resolve(printString('Episodio III: la venganza de los sith')))
+
   })
 }
 function printParalelas() {
@@ -35,9 +36,10 @@ function printParalelas() {
 async function printOriginal() {
   await printString('Episodio IV: una nueva esperanza');
   await printString('Episodio V: el imperio contraataca');
-  await printString('Episodio VI: el regreso del jedi');
+  printString('Episodio VI: el regreso del jedi');
 }
-// con await async
+
+//aquí no es necesario hacer async/await ni promesa ya que es la última a ejecutar.
 function printSecuelas() {
   printString('Episodio VII: el despertar de la fuerza')
     .then(() => printString('Episodio VIII: el último jedi'))
