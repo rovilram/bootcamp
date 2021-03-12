@@ -1,0 +1,591 @@
+:root {
+  --backgroundColor: #ff6600;
+  --textSecondaryColor: White;
+  --backgroundSecondaryColor: #999;
+  --textPrincipalColor: black;
+ 
+}
+
+/* TAMAÑO MÓVIL: 420px o MENOS*/
+body {
+  margin: 0;
+  font-family: "Roboto Slab", serif;
+  font-weight: normal;
+}
+h1,
+h2 {
+  font-family: "Pangolin", sans-serif;
+  font-weight: 600;
+}
+h3,nav {
+  font-family: "Pangolin", sans-serif;
+  font-weight: 400;
+}
+
+h2,
+h3 {
+  color: var(--backgroundColor);
+}
+.header {
+  display: flex;
+  height: 100px;
+  background-color: var(--backgroundColor);
+}
+.footer {
+  height: 100px;
+  background-color: var(--backgroundColor);
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.footerWrapper {
+  width: 94%;
+  margin: 0 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 96%;
+  margin: 0 2%;
+  top: 0;
+}
+
+.introductionWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.introduction.portfolio {
+  padding:30px 0;
+}
+
+
+div.introductionText {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  left: 0;
+}
+
+img.logo {
+  width: 100px;
+  border-radius: 50%;
+}
+img.filter {
+  filter: brightness(0.5);
+}
+
+h1.introductionText {
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 1rem;
+  color: var(--textSecondaryColor);
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: center;
+  border-right: 1px solid var(--textSecondaryColor);
+  animation: typewriterEffect 5s steps(40) infinite alternate,
+    cursorBlink 1s infinite;
+}
+
+.navDesktop {
+  display: none;
+}
+
+a.phone,
+a.email {
+  text-decoration: none;
+  color: var(--textPrincipalColor);
+}
+
+img.responsive {
+  width: 100%;
+}
+
+.mainWrapper {
+  width: 98%;
+  margin: 0 1%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+a.linkedin {
+  color: var(--textPrincipalColor);
+}
+a.linkedin:hover {
+  color: #0e76a8;
+}
+a.facebook {
+  color: var(--textPrincipalColor);
+}
+a.facebook:hover {
+  color: #3b5998;
+}
+a.twitter {
+  color: var(--textPrincipalColor);
+}
+a.twitter:hover {
+  color: #00acee;
+}
+a.instagram {
+  color: var(--textPrincipalColor);
+}
+a.instagram:hover {
+  color: #3f729b;
+}
+
+/* ANIMACIONES CSS*/
+@keyframes typewriterEffect {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes cursorBlink {
+  0% {
+    border-color: black;
+  }
+  100% {
+    border-color: var(--textSecondaryColor);
+  }
+}
+
+/* nav Mobile styles  */
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+#menuIcon {
+  display: block;
+  font-size: 2rem;
+  padding: 0;
+  color: var(--textSecondaryColor);
+  text-decoration: none;
+  text-align: right;
+  z-index: 1;
+}
+#menuIconClose {
+  display: none;
+  padding: 10px 15px;
+  color: var(--textSecondaryColor);
+  background-color: var(--backgroundColor);
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 1rem;
+  text-align: right;
+  z-index: 0;
+}
+#menuIcon:target {
+  display: none;
+}
+#menuIcon:target + #menuIconClose {
+  display: block;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  opacity: 1;
+  z-index: 2;
+}
+
+#menuIcon:target ~ .mobileMenu {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 95%;
+  height: 95%;
+  margin: 2.5% 2.5%;
+  background-color: var(--backgroundSecondaryColor);
+  opacity: 0.9;
+  z-index: 1;
+  animation: mobileMenuAnimation 1s ease;
+}
+
+/* esta es una fomra rara de llamar a .mobileMenu
+Es para ver si consigo hacer la animaciín cuando 
+desaparece .mobileMenu */
+/*TODO: Intentar hacer animación de desaparecer menú*/
+#menuIcon:not(:target) ~ .mobileMenu {
+  display: none;
+  z-index: 0;
+  text-align: center;
+  padding: 0;
+  opacity: 0;
+  animation: mobileMenuAnimationBack 1s ease;
+}
+
+@keyframes mobileMenuAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.95;
+  }
+}
+
+@keyframes mobileMenuAnimationBack {
+  from {
+    opacity: 0.95;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.mobileMenu ul {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobileMenu li {
+  min-height: 25%;
+  border-bottom: 1px solid var(--textSecondaryColor);
+}
+.mobileMenu a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  color: var(--backgroundColor);
+  font-weight: bold;
+  font-size: xx-large;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sectionWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  padding: 20px 0;
+  border-top: 1px solid var(--backgroundColor);
+  border-bottom: 1px solid var(--backgroundColor);
+}
+
+.article h3 {
+  margin: 5px;
+}
+
+.article .articleLink {
+  display: inline-block;
+  background-color: var(--backgroundColor);
+  padding: 5px 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--textSecondaryColor);
+}
+.articleWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 15px 0;
+}
+
+.articleWrapper.contact {
+  align-items: center;
+}
+
+.instagram,
+.linkedin,
+.twitter,
+.facebook {
+  font-size: 2rem;
+}
+.formulario form {
+  display: flex;
+  flex-direction: column;
+}
+
+.articleText.about > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+div.about.html > i {
+  font-size: 10rem;
+  color: #f06529;
+}
+
+div.about.html > i:hover,
+div.about.css > i:hover {
+  animation: animationRotate 1s infinite;
+}
+
+div.about.css > i {
+  font-size: 10rem;
+  color: #264de4;
+}
+
+.articleText {
+  text-align: justify;
+  line-height: 125%;
+}
+@keyframes animationRotate {
+  0% {
+    transform: none;
+  }
+  25% {
+    transform: rotate(15deg);
+  }
+  75% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+/* TAMAÑO TABLET: DESDE 421px HASTA 960 px */
+@media screen and (min-width: 421px) {
+  .mainWrapper {
+    width: 420px;
+    margin: 0 auto;
+  }
+
+  .mainWrapper.about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+
+  .header {
+    height: 150px;
+  }
+  h1.introductionText {
+    font-size: 1.75rem;
+  }
+  .headerWrapper {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+
+  .articleWrapper {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  .articleWrapper * {
+    padding: 0 10px;
+    flex-basis: 50%;
+  }
+
+
+  .articleImg {
+    max-width: 33%;
+    margin: 5px;
+  }
+  .navMobile {
+    display: none;
+  }
+  .navDesktop {
+    display: flex;
+    min-width: 100%;
+  }
+  .navDesktop a {
+    text-decoration: none;
+    color: var(--textSecondaryColor);
+  }
+  .navDesktop ul.menu,
+  .navDesktop ul.submenu {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+  }
+  .navDesktop ul.menu {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  ul.menu li {
+    flex-grow: 1;
+    padding: 0px;
+    transition: background-color 1s;
+  }
+  ul.menu li:hover {
+    background-color: var(--textSecondaryColor);
+  }
+
+  ul.menu li:hover a {
+    color: var(--textPrincipalColor);
+  }
+
+  ul.menu li.dropdown {
+    position: relative;
+    padding-bottom: 0px;
+  }
+  .navDesktop ul.submenu {
+    display: none;
+    opacity: 0;
+    animation: submenuAnimation 1s;
+  }
+  li.dropdown:not(:hover) ul.submenu {
+    animation: submenuAnimationBack 2s;
+  }
+  li.dropdown:hover ul.submenu {
+    width: 100%;
+    display: block;
+    opacity: 1;
+    position: absolute;
+    left: 0;
+    top: 18px;
+    background-color: var(--textSecondaryColor);
+    padding: 15px 0;
+  }
+
+  @keyframes submenuAnimation {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  /* TODO: No soy capaz de hacer la animación de regreso. Preguntar.... */
+  @keyframes submenuAnimationBack {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+  ul.submenu li {
+    padding: 10px 0;
+    font-size: 0.75rem;
+  }
+
+  
+
+  .articleWrapper.about {
+    flex-direction: column;
+  }
+
+
+  .image.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* TAMAÑO DESKTOP: DESDE 961px*/
+@media screen and (min-width: 961px) {
+  h1.introductionText {
+    font-size: 4rem;
+  }
+  .mainWrapper {
+    width: 960px;
+    margin: 0 auto;
+    flex-direction: row;
+  }
+
+  .mainWrapper.portfolio {
+    flex-direction:column;
+  }
+  
+  
+  .header {
+    height: 100px;
+  }
+  .headerWrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .footerWrapper {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .sectionWrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+
+  .articleWrapper.contact * {
+    padding: 5px;
+  }
+
+  .article {
+    max-width: 50%;
+    border-bottom-style: hidden;
+    border-top-style: hidden;
+    justify-content: space-between;
+  }
+
+  .articleWrapper.contact {
+    min-width: 50%;
+    justify-content: center;
+    align-items: center;
+    min-height: 120px;
+    padding-top: 0;
+  }
+  .articleWrapper.contact:not(.social) div:last-child {
+    min-height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .articleWrapper.contact:not(.social) {
+    flex-direction: column;
+  }
+
+  .navDesktop {
+    flex-grow: 1;
+    min-width: 0%;
+  }
+
+  .mainWrapper.about {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .article.about {
+    min-width: 100%;
+  }
+  div.image.about {
+    flex-grow: 1;
+  }
+  .articleWrapper.about {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}

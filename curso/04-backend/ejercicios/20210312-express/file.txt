@@ -1,0 +1,4 @@
+puerta
+caballo 
+camión
+elemento

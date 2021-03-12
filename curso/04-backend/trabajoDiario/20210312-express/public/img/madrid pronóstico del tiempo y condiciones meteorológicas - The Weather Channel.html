@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>madrid pronóstico del tiempo y condiciones meteorológicas - The Weather Channel</title>
+    <link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="headerAdvisor">
+        <img src="https://via.placeholder.com/320x50" alt="" class="headerAdvisor">
+    </div>
+    <div class="mainWrapper">
+        <header class="mainHeader">
+            <div class="headerWrapper">
+                <div class="logo"><img src="img/logo_weather.png" alt=""></div>
+                <div class="buscadorLocalidad">
+                    <h1>Tiempo en Madrid</h1>
+                    <div class="searchIcon"><i class="fas fa-search"></i></div>
+                </div>
+                <div class="hamburgerMenu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </header>
+        <section class="nowPrediction">
+            <div class="actualTime">
+                <div>
+                    Hasta 13:10 CET
+                </div>
+            </div>
+            <div class="nowPredictionWrapper">
+                <div class="tempWrapper">
+                    <div class="temp now">12º</div>
+                    <div class="conditions">Soleado</div>
+                </div>
+                <div class="iconPredictionWrapper">
+                    <div class="iconPrediction">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                    <div class="maxMinTemp">
+                        15º/1º
+                    </div>
+                </div>
+            </div>
+            <div class="rainChance">
+                1 % de probabilidad de lluvia hasta las 19:00
+            </div>
+        </section>
+        <section class="todayPrediction">
+            <header class="todayHeader">
+                <h2>Pronóstico para Madrid</h2>
+            </header>
+            <div class="todayWrapper">
+                <div class="todayButtons">
+                    <div class="todayButton">Hoy</div>
+                    <div class="todayButton">Por hora</div>
+                    <div class="todayButton">Diario</div>
+                </div>
+                <div class="filesWrapper">
+                    <div class="filePrediction past">
+                        <div class="fileName">Mañana</div>
+                        <div class="temp">8º</div>
+                        <div class="icon"><i class="fas fa-sun"></i></div>
+                        <div class="precipitation">--</div>
+                    </div>
+                    <div class="filePrediction past">
+                        <div class="fileName">Tarde</div>
+                        <div class="temp">16º</div>
+                        <div class="icon"><i class="fas fa-sun"></i></div>
+                        <div class="precipitation">--</div>
+                    </div>
+                    <div class="filePrediction">
+                        <div class="fileName bold">Noche</div>
+                        <div class="temp">9º</div>
+                        <div class="icon"><i class="fas fa-moon"></i></div>
+                        <div class="precipitation"><i class="fas fa-tint"></i>2%</div>
+                    </div>
+                    <div class="filePrediction">
+                        <div class="fileName">Madrugada</div>
+                        <div class="temp">3º</div>
+                        <div class="icon"><i class="fas fa-moon"></i></div>
+                        <div class="precipitation"><i class="fas fa-tint"></i>3%</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    </div>
+    <footer>
+        <nav class="footerNav">
+            <div class="footer">
+                <a href="#">
+                    <div class="footerFile">
+                        <div class="icon"><i class="fas fa-calendar-day"></i></div>
+                        <div class="text">Hoy</div>
+                    </div>
+                </a>
+            </div>
+            <div class="footer">
+                <a href="#">
+                    <div class="footerFile">
+                        <div class="icon"><i class="far fa-clock"></i></div>
+                        <div class="text">por hora</div>
+                    </div>
+                </a>
+            </div>
+            <div class="footer">
+                <a href="#">
+                    <div class="footerFile">
+                        <div class="icon"><i class="fas fa-calendar-week"></i></div>
+                        <div class="text">10 días</div>
+                    </div>
+                </a>
+            </div>
+            <div class="footer">
+                <a href="#">
+                    <div class="footerFile">
+                        <div class="icon"><i class="fas fa-globe-europe"></i></div>
+                        <div class="text">Radar</div>
+                    </div>
+                </a>
+            </div>
+            </div>
+    </footer>
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script></body>
+
+</html>

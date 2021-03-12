@@ -1,0 +1,43 @@
+.wrapper1, .wrapper2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin:50px;
+}
+
+.pushWordDiv, .getWordDiv {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#sendBtn, #getBtn, #sendBtn2, #getBtn2 {
+    background-color: grey;
+    margin:10px;
+    padding:10px;
+    border-radius: 10px;
+    width:40vw;
+    text-align: center;
+}
+
+#wordInput, #wordInput2 {
+    height:30px;
+    width:40vw;
+    padding:0px;
+
+}
+.wrapper2 {
+    display: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.word {
+    border:1px solid black;
+    height:20vh;
+    width:90vw;
+    text-align: center;
+    font-size:5rem;
+
+}

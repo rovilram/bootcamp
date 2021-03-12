@@ -54,6 +54,26 @@ Consume más recursos que http, pero es más indicado para aplicaciones _real ti
 
 Además de protocolos web, hay protocolos para mail (SMTP, POP3,...), telnet, FTP....
 
+# CRUD
+En el protocolo http, en la petición que hace el cliente al servidor, puede incluir la *finalidad* de esa petición. Estas siguen el concepto **CRUD**
+CRUD          HTTP    
+Create  -->   POST
+Read    -->   GET
+Update  -->   PUT
+Delete  -->   DEL
+
+Estos métodos son los que pondríamos en un *form*ulario HTML en el atributo *method*. Normalmente vamos a usar solo dos de ellos:
+* post: Estas peticiones incluyen datos que deben ser tratados.
+* get: Estas peticiones se usan para pedir algo.
+
+Nosotros en **backend** vamos a atender solicitudes *get* cuando queramos *mandar* datos.
+Asi el servidor puede enrutar las peticiones que son de escritura, con las de lectura, ... 
+
+Las peticiones no siempre las vamos a hacer directamente desde el navegador (no nos sirve en SPA), ni desde formularios, sino que las vamos a hacer con `fetch`.
+Fetch por defecto hace una petición por *get*
+
+
+
 ## ARRANCAR SERVIDOR WEB EN NODE
 
 ```javascript
@@ -120,3 +140,40 @@ Cuando devolvemos una respuesta con un html, **NO VAMOS A ESCRIBIR DIRECTAMENTE 
 ```
 Tenemos que tener en cuenta que si ese html tiene un css, lo vamos a tener que traer también (y hacer un endpoint también para ello y enlazarlo según esa URL en el css)
 Este es el content-type para css: `"Content-Type": "text/html"`
+
+
+## Express
+Es un framework que va a acelerar el desarrollo de aplicaciones frontend.
+```javascript
+
+// 1) Importar dependencias
+const express = require('express');
+
+// 2) Configuración inicial
+const server = express();
+const listenPort = 8080;
+
+// Folder with my frontend app
+const staticFilesPath = express.static(__dirname + '/public');
+server.use(staticFilesPath);
+
+// JSON support
+server.use(express.urlencoded({ extended: false }));
+server.use(express.json());
+
+// -------------- API REST --------------
+
+server.get('/loadImage', (req, res) => {
+
+  // JSON response
+  res.send({ src: 'img/atlasV.jpg' });
+});
+
+// ...
+
+// -------------- START SERVER --------------
+
+server.listen(listenPort, () => console.log(`Server started listening on ${listenPort}`));
+
+
+```
